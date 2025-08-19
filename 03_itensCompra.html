@@ -23,11 +23,8 @@
     const lista = [fruta1, fruta2, fruta3, bebida1, bebida2, bebida3];
     const listaFrutas = lista.slice(0,4);
     const listaBebidas = lista.slice(4);
-    lista.split(`,`);
-    listaFrutas.split(`,`);
-    listaBebidas.split(`,`);
 
     //SAÍDA
-    document.write(`As frutas a serem compradas são: ${listaFrutas}. As bebidas a serem compradas são: ${listaBebidas}. A lista completa é: ${lista}.`);
+    document.write(`As frutas a serem compradas são: ${listaFrutas.join(`,`)}. As bebidas a serem compradas são: ${listaBebidas.join(`,`)}. A lista completa é: ${lista.join(`,`)}.`);
 
 </script>
