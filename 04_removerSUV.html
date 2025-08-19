@@ -19,7 +19,7 @@
     let novoCarrosSUV
     
     if (qualRemoverSUV > -1) {
-       novoCarrosSUV = carrosSUV.slice(qualRemoverSUV, 1);
+       novoCarrosSUV = carrosSUV.splice(qualRemoverSUV, 1);
         document.write(`Lista antes da remoção = ${carrosSUV}. Após a remoção = ${novoCarrosSUV}`);
     } else {
         document.write(`este item não está presente na lista!`);
