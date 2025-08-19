@@ -9,15 +9,29 @@
     //ENTRADA
     const primeiroNum = Number(prompt(`Insira um número!`));
     const segundoNum = Number(prompt(`Insira outro número!`));
+    const terceiroNum = Number(prompt(`Insira o terceiro número!`));
 
     //PROCESSAMENTO
     let array = [];
-    if (segundoNum > primeiroNum) {
-        array = [segundoNum, primeiroNum];
-    } else {
+    if (primeiroNum > segundoNum) {
         array = [primeiroNum, segundoNum];
+        if (segundoNum > terceiroNum) {
+            array = [primeiroNum, segundoNum, terceiroNum];
+        } else { if (terceiroNum > primeiroNum) {
+            array = [terceiroNum, primeiroNum, segundoNum];
+        } else {
+            array = [primeiroNum, terceiroNum, segundoNum];
+        }}
+    } else {
+        array = [segundoNum, primeiroNum];
+        if (segundoNum < terceiroNum) {
+            array = [terceiroNum, segundoNum, primeiroNum];
+        } else { if (terceiroNum > primeiroNum) {
+            array = [segundoNum, terceiroNum, primeiroNum];
+        } else {
+            array = [segundoNum, primeiroNum, terceiroNum];
+        }}
     }
-
     //SAÍDA
     document.write (`${array.join(`-`)}`);
 </script>
