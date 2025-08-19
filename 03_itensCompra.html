@@ -12,19 +12,22 @@
 
     //ENTRADA
     const fruta1 = prompt(`Diga uma fruta para a lista de compras!`);
-    const fruta2 = prompt(`Diga outra fruta para a lista`);
-    const fruta3 = prompt(`Diga mais um número para a lista`);
+    const fruta2 = prompt(`Diga mais outra fruta para a lista`);
+    const fruta3 = prompt(`Diga mais uma fruta para a lista`);
     const bebida1 = prompt(`Diga uma bebida para a lista de compras!`);
-    const bebida2 = prompt(`Diga outra bebida`);
+    const bebida2 = prompt(`Diga mais outra bebida`);
     const bebida3 = prompt(`Diga mais uma bebida`);
 
 
     //PROCESSAMENTO
     const lista = [fruta1, fruta2, fruta3, bebida1, bebida2, bebida3];
-
-
+    const listaFrutas = lista.slice(0,4);
+    const listaBebidas = lista.slice(4);
+    lista.split(`,`);
+    listaFrutas.split(`,`);
+    listaBebidas.split(`,`);
 
     //SAÍDA
-    document.write(lista);
+    document.write(`As frutas a serem compradas são: ${listaFrutas}. As bebidas a serem compradas são: ${listaBebidas}. A lista completa é: ${lista}.`);
 
 </script>
