@@ -12,9 +12,15 @@
 
 
     //PROCESSAMENTO
-    Array.of(primeiroNum, segundoNum);
-
+    let array = [];
+    if (primeiroNum > segundoNum) {
+        array = [segundoNum, primeiroNum];
+    } else {
+        array = [primeiroNum, segundoNum];
+    }
+    let arrayHifen = array.split (`-`);
 
     //SAÍDA
+    document.write (${arrayHifen});
 
 </script>
