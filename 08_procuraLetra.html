@@ -9,11 +9,20 @@
     */
 
     //ENTRADA
+    const palavra = prompt(`Digite UMA palavra.`);
+    const letra = prompt(`Digite uma letra presente nesta palavra`);
 
 
     //PROCESSAMENTO
+    const letraNaPalavra = palavra.indexOf(letra);
+    const posicao = letraNaPalavra + 1
 
 
+    if (letraNaPalavra > -1) {
+        document.write(`Esta letra aparece primeiro estando na ${posicao}° posição!`);
+    } else {
+        document.write(`Esta letra não existe nesta palavra!`);
+    }
     //SAÍDA
 
 </script>
