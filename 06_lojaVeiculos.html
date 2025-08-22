@@ -13,10 +13,50 @@
     */
 
     //ENTRADA
+    let carrosSuv = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    const um = prompt(`Diga um veículo para ser inserido na lista.`);
+    const tipoUm = prompt(`Qual o tipo deste veículo? (digite em CAIXA ALTA)`);
+    const dois = prompt(`Diga mais um veículo para ser inserido na lista.`);
+    const tipoDois = prompt(`Qual o tipo deste veículo? (digite em CAIXA ALTA)`);
+    const tres = prompt(`Diga mais um veículo para ser inserido na lista.`);
+    const tipoTres = prompt(`Qual o tipo deste veículo? (digite em CAIXA ALTA)`);
 
 
     //PROCESSAMENTO
+    if(tipoUm == "SUV") {
+        carrosSuv.push(um);
+    } else if(tipoUm == "SEDAN"){
+        carrosSedan.push(um);
+    } else if(tipoUm == "HATCH") {
+        carrosHatch.push(um);
+    } else {
+        alert(`TIPO INVÁLIDO`)
+    }
 
+    if(tipoDois == "SUV") {
+        carrosSuv.push(dois);
+    } else if(tipoDois == "SEDAN"){
+        carrosSedan.push(dois);
+    } else if(tipoDois == "HATCH") {
+        carrosHatch.push(dois);
+    } else {
+        alert(`TIPO INVÁLIDO`)
+    }
+
+    if(tipoTres == "SUV") {
+        carrosSuv.push(tres);
+    } else if(tipoTres == "SEDAN"){
+        carrosSedan.push(tres);
+    } else if(tipoTres == "HATCH") {
+        carrosHatch.push(tres);
+    } else {
+        alert(`TIPO INVÁLIDO`)
+    }
+
+    document.write(`Lista de carros SUV: ${carrosSuv.join(", ")}. Lista de carros SEDAN: ${carrosSedan.join(",")}. Lista de carros HATCH: ${carrosHatch.join(", ")}.`);
 
     //SAÍDA
 
